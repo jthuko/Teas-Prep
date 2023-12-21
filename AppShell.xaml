@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MblexApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MblexApp"
+    Shell.FlyoutBehavior="Flyout">
+
+    <ShellContent
+    Title="Log In"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="MainPage" />
+    <ShellContent Title="Home"
+              Icon="cat.png"
+              ContentTemplate="{DataTemplate local:HomePage}"
+               Route="HomePage" />
+    <ShellContent Title="Questions"
+                 Icon="cat.png"
+                 ContentTemplate="{DataTemplate local:PublicQuestionsPage}"
+                  Route="PublicQuestionsPage" />
+    <ShellContent Title="My Content"
+                 Icon="dog.png"
+                 ContentTemplate="{DataTemplate local:MyContent}" 
+                  Route="MyContent" />
+    <ShellContent Title="Settings"
+             Icon="dog.png"
+             ContentTemplate="{DataTemplate local:SettingsPage}" 
+              Route="SettingsPage" />
+    <ShellContent Title="FlashCards"
+          Icon="cat.png"
+          ContentTemplate="{DataTemplate local:PublicFlashcardPage}"
+           Route="PublicFlashcardPage" />
+</Shell>

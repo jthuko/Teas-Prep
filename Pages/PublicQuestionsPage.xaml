@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MblexApp"
+             x:Class="MblexApp.PublicQuestionsPage">
+    <ContentPage.Resources>
+        <local:BoolToInverseBoolConverter x:Key="BoolToInverseBoolConverter" />
+        <local:IndexToBooleanConverter x:Key="IndexToBooleanConverter" />
+        <local:ChoiceToColorConverter x:Key="ChoiceToColorConverter"/>
+        <local:CorrectAnswerToColorConverter x:Key="CorrectAnswerToColorConverter"/>
+    </ContentPage.Resources>
+    <NavigationPage.TitleView>
+        <Label x:Name="pageTitleView"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               FontSize="Medium"
+               TextColor="White"
+               FontAttributes="Bold"
+               FontAutoScalingEnabled="True"
+               Text="Home"/>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <CollectionView x:Name="QuestionsListView" ItemsSource="{Binding PublicQuestions}" SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10">
+                        <Label Text="{Binding Text}" TextColor="Orange" />
+                        <RadioButton Content="{Binding Choices[0].ChoiceText}" Value="{Binding Choices[0].ChoiceText}" CheckedChanged="RadioButton_CheckedChanged" />
+                        <RadioButton Content="{Binding Choices[1].ChoiceText}" Value="{Binding Choices[1].ChoiceText}" CheckedChanged="RadioButton_CheckedChanged" />
+                        <RadioButton Content="{Binding Choices[2].ChoiceText}" Value="{Binding Choices[2].ChoiceText}" CheckedChanged="RadioButton_CheckedChanged" />
+                        <RadioButton Content="{Binding Choices[3].ChoiceText}" Value="{Binding Choices[3].ChoiceText}" CheckedChanged="RadioButton_CheckedChanged" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
+
+    </ContentPage.Content>
+</ContentPage>
