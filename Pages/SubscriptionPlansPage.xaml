@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MblexApp"
+             x:Class="MblexApp.SubscriptionPlansPage">
+       
+    <NavigationPage.TitleView>
+        <Label x:Name="pageTitleView"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               FontSize="Medium"
+               TextColor="White"
+               FontAttributes="Bold"
+               FontAutoScalingEnabled="True"
+               Text="Anatomy"/>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <!-- Use a Grid layout with two rows -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <!-- Auto-sized row for the button -->
+                <RowDefinition Height="*"/>
+                <!-- Star-sized row for the CollectionView to fill remaining space -->
+            </Grid.RowDefinitions>
+
+            <!-- CollectionView for displaying questions in the second row -->
+            <CollectionView Grid.Row="1" x:Name="SubscriptionCollectionView" ItemsSource="{Binding SubscriptionPlans}" SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame>
+                            <StackLayout>
+                                <Label Text="{Binding Name}"  FontAttributes="Bold" FontSize="Medium" HorizontalOptions="Center"/>
+                                <Label  Text="***Benefits***" Margin="0,5,0,5" FontAttributes="Bold" FontSize="Medium" HorizontalOptions="Center"/>
+                                <Label Margin="10,0,0,0" Text="&#x2022; Unlimited Access to over 2000 Multi Choice Questions"  FontSize="Medium"/>
+                                <Label  Text="***Coming Soon!***" Margin="0,5,0,0"  FontAttributes="Bold" FontSize="Medium" HorizontalOptions="Center"/>
+                                <Label Margin="10,0,0,0" Text="&#x2022; Flashcards"   FontSize="Medium"/>
+                                <Label Margin="10,0,0,0" Text="&#x2022; Create and share Questions and Flashcards"   FontSize="Medium"/>
+                                <Label Margin="10,0,0,0" Text="&#x2022; Create Notes"   FontSize="Medium"/>
+                                <Label Margin="10,0,0,0" Text="&#x2022; Generate Questions/Flashcards using AI and Save them"   FontSize="Medium"/>
+                                <Label Margin="10,0,0,0" Text="&#x2022; Create Study groups with other users"   FontSize="Medium"/>
+                                <Label Margin="10,0,0,0" Text="&#x2022; Chat"  FontSize="Medium"/>
+                                <Label Margin="10,0,0,0" Text="&#x2022; Educational Videos"  FontSize="Medium"/>
+                                <Label Text="{Binding LocalizedPrice, StringFormat='Monthly subscription: {0:C2}. Unsubscribe anytime'}" Margin="5"  FontAttributes="Bold" FontSize="Medium"/>
+                                <Button Text="Subscribe" HorizontalOptions="Center" Clicked="SubscriptionButton_Clicked"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <!-- Add an ActivityIndicator in the third row, centered horizontally and vertically -->
+            <ActivityIndicator Grid.Row="1" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Color="Green"
+                           VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MblexApp"
+             x:Class="MblexApp.EthicsPage">
+    <ContentPage.Resources>
+        <local:BoolToInverseBoolConverter x:Key="BoolToInverseBoolConverter" />
+        <local:IndexToBooleanConverter x:Key="IndexToBooleanConverter" />
+        <local:ChoiceToColorConverter x:Key="ChoiceToColorConverter"/>
+        <local:CorrectAnswerToColorConverter x:Key="CorrectAnswerToColorConverter"/>
+    </ContentPage.Resources>
+    <NavigationPage.TitleView>
+        <Label x:Name="pageTitleView"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               VerticalOptions="CenterAndExpand"
+               HorizontalOptions="CenterAndExpand"
+               FontSize="Medium"
+               TextColor="White"
+               FontAttributes="Bold"
+               FontAutoScalingEnabled="True"
+               Text="Ethics"/>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <!-- Use a Grid layout with two rows -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <!-- Auto-sized row for the button -->
+                <RowDefinition Height="*"/>
+                <!-- Star-sized row for the CollectionView to fill remaining space -->
+            </Grid.RowDefinitions>
+
+            <!-- Add a Clear button with a click event handler in the first row -->
+            <Button Grid.Row="0" Text="Shuffle Questions" Clicked="Button_Clicked" Margin="2"/>
+
+            <!-- CollectionView for displaying questions in the second row -->
+            <CollectionView Grid.Row="1" x:Name="QuestionsListView" ItemsSource="{Binding PublicQuestions}" SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            <Label Text="{Binding Text}"  FontAttributes="Bold" FontSize="Medium" />
+                            <RadioButton Content="{Binding Choices[0].ChoiceText}" Value="{Binding Choices[0].ChoiceText}" CheckedChanged="RadioButton_CheckedChanged" />
+                            <RadioButton Content="{Binding Choices[1].ChoiceText}" Value="{Binding Choices[1].ChoiceText}" CheckedChanged="RadioButton_CheckedChanged" />
+                            <RadioButton Content="{Binding Choices[2].ChoiceText}" Value="{Binding Choices[2].ChoiceText}" CheckedChanged="RadioButton_CheckedChanged" />
+                            <RadioButton Content="{Binding Choices[3].ChoiceText}" Value="{Binding Choices[3].ChoiceText}" CheckedChanged="RadioButton_CheckedChanged" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <!-- Add an ActivityIndicator in the third row, centered horizontally and vertically -->
+            <ActivityIndicator Grid.Row="1" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" Color="Green"
+                       VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
