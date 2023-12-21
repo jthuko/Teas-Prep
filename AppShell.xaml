@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MblexApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MblexApp"
+    Shell.FlyoutBehavior="Flyout">
+    <Shell.ToolbarItems>
+        <ToolbarItem x:Name="Upgrade" Text="Upgrade"
+                     Priority="1"
+                     Order="Primary" Clicked="Upgrade_Clicked"
+                     />
+        <ToolbarItem Text="Settings" 
+                     Priority="1"
+                     Order="Secondary"
+                     Clicked="Profile_Clicked"/>
+        <ToolbarItem x:Name="SigninSignout" Text="SignIn"
+             Priority="2"
+             Order="Secondary"
+             Clicked="SigninSignout_Clicked"/>
+    </Shell.ToolbarItems>
+    <ShellContent Title="Anatomy"
+                 Icon="cat.png"
+                 ContentTemplate="{DataTemplate local:AnatomyPage}"
+                  Route="AnatomyPage" />
+    <ShellContent Title="Kinesiology"
+             Icon="cat.png"
+             ContentTemplate="{DataTemplate local:KinesiologyPage}"
+              Route="KinesiologyPage" />
+    <ShellContent Title="Pathology"
+         Icon="cat.png"
+         ContentTemplate="{DataTemplate local:PathologyPage}"
+          Route="PathologyPage" />
+    <ShellContent Title="Disorders"
+             Icon="cat.png"
+             ContentTemplate="{DataTemplate local:DisordersPage}"
+              Route="DisordersPage" />
+    <ShellContent Title="Techniques"
+                Icon="cat.png"
+                ContentTemplate="{DataTemplate local:TechniquesPage}"
+                Route="TechniquesPage" />
+    <ShellContent Title="Ethics"
+             Icon="cat.png"
+             ContentTemplate="{DataTemplate local:EthicsPage}"
+              Route="EthicsPage" />
+</Shell>
