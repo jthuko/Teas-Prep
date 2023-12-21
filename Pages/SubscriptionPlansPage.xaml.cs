@@ -1,9 +1,9 @@
 
-using MblexApp.Models;
-using MblexApp.Services;
-using MblexApp.StaticMethods;
-using MblexApp.ViewModel;
-namespace MblexApp;
+using TeasPrep.Models;
+using TeasPrep.Services;
+using TeasPrep.StaticMethods;
+using TeasPrep.ViewModel;
+namespace TeasPrep;
 
 public partial class SubscriptionPlansPage : ContentPage
 {

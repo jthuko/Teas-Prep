@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace MblexApp
+namespace TeasPrep
 {
     public class Program
     {

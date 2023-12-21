@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MblexApp.Models
+namespace TeasPrep.Models
 {
     //Main public questions list
     public class PublicQuestion

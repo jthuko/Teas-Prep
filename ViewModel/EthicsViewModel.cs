@@ -1,7 +1,7 @@
 ﻿
-using MblexApp.Models;
-using MblexApp.Services;
-using MblexApp.StaticMethods;
+using TeasPrep.Models;
+using TeasPrep.Services;
+using TeasPrep.StaticMethods;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Runtime.CompilerServices;
 using System.Windows.Input;
 
 
-namespace MblexApp.ViewModel
+namespace TeasPrep.ViewModel
 {
 
     public class EthicsViewModel:INotifyPropertyChanged

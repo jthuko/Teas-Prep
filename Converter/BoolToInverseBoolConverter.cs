@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace MblexApp
+namespace TeasPrep
 {
     [ContentProperty(nameof(TrueValue))]
     public class BoolToInverseBoolConverter : IValueConverter

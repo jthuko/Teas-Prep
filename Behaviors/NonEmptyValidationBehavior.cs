@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MblexApp.Behaviors
+namespace TeasPrep.Behaviors
 {
     public class NonEmptyValidationBehavior : Behavior<Entry>
     {

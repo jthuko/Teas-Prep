@@ -6,10 +6,10 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MblexApp.Services;
-using MblexApp.Models;
+using TeasPrep.Services;
+using TeasPrep.Models;
 
-namespace MblexApp
+namespace TeasPrep
 {
     public static class UserManager
     {

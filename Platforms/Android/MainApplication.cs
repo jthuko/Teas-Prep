@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace MblexApp
+namespace TeasPrep
 {
     [Application]
     public class MainApplication : MauiApplication

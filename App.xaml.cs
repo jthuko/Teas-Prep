@@ -1,8 +1,8 @@
-﻿using MblexApp.Models;
-using MblexApp.Services;
+﻿using TeasPrep.Models;
+using TeasPrep.Services;
 using Plugin.InAppBilling;
 
-namespace MblexApp
+namespace TeasPrep
 {
     public partial class App : Application
     {

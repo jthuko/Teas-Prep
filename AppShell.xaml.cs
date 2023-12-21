@@ -1,7 +1,7 @@
-﻿using MblexApp.Services;
+﻿using TeasPrep.Services;
 using System.Runtime.InteropServices;
 
-namespace MblexApp
+namespace TeasPrep
 {
     public partial class AppShell : Shell
     {

@@ -1,4 +1,4 @@
-﻿using MblexApp.Models;
+﻿using TeasPrep.Models;
 using Plugin.InAppBilling;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MblexApp.StaticMethods
+namespace TeasPrep.StaticMethods
 {
     public static class InAppBilling
     {

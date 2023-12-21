@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace MblexApp
+namespace TeasPrep
 {
     [Register("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

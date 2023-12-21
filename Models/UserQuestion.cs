@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MblexApp.Models
+namespace TeasPrep.Models
 {
     public class UserQuestion
     {

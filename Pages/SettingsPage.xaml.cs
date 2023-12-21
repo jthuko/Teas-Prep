@@ -1,4 +1,4 @@
-namespace MblexApp;
+namespace TeasPrep;
 
 public partial class SettingsPage : ContentPage
 {

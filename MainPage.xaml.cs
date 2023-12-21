@@ -1,13 +1,13 @@
 ﻿
-using MblexApp;
-using MblexApp.Services;
-using MblexApp.StaticMethods;
+using TeasPrep;
+using TeasPrep.Services;
+using TeasPrep.StaticMethods;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Maui.Controls;
 using Plugin.InAppBilling;
 
-namespace MblexApp
+namespace TeasPrep
 {
     public partial class MainPage : ContentPage
     {

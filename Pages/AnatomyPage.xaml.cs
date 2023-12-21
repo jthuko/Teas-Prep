@@ -1,7 +1,7 @@
 
-using MblexApp.Models;
-using MblexApp.ViewModel;
-namespace MblexApp;
+using TeasPrep.Models;
+using TeasPrep.ViewModel;
+namespace TeasPrep;
 
 public partial class AnatomyPage : ContentPage
 {

@@ -1,9 +1,9 @@
-﻿using MblexApp.Models;
+﻿using TeasPrep.Models;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Windows.Input;
 
-namespace MblexApp.ViewModel
+namespace TeasPrep.ViewModel
 {
     public class UserViewModel : INotifyPropertyChanged
     {

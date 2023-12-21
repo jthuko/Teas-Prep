@@ -3,7 +3,7 @@ using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 
 
-namespace MblexApp
+namespace TeasPrep
 {
     public static class MauiProgram
     {
